@@ -1,3 +1,5 @@
+package slayTheVine;
+
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 
 @SpireInitializer

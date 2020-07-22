@@ -13,7 +13,7 @@ public class ZipZoom extends AbstractVineCard {
     int damagePlusAmt = 2;
 
     //all hardcoded bc I don't have the brain power rn to make this read JSON
-    final String ID = "SlayTheVine:ZipZoom";
+    final String ID = "slayTheVine:ZipZoom";
     final String NAME = "Zip Zoom";
     final String IMG = "img/cards/ZipZoom.png";
     final int COST = 1;
