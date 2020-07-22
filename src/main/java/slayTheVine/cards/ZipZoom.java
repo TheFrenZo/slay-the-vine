@@ -1,6 +1,5 @@
-package cards;
+package slayTheVine.cards;
 
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -8,9 +7,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class ZipZoom extends CustomCard {
+public class ZipZoom extends AbstractVineCard {
 
     int damage = 5;
+    int damagePlusAmt = 2;
 
     //all hardcoded bc I don't have the brain power rn to make this read JSON
     final String ID = "SlayTheVine:ZipZoom";
@@ -37,6 +37,10 @@ public class ZipZoom extends CustomCard {
     //increase damage dealt
     @Override
     public void upgrade() {
-        damage += 2;
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(damagePlusAmt);
+            initializeDescription();
+        }
     }
 }
