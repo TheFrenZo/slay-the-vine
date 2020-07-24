@@ -2,16 +2,21 @@ package slayTheVine;
 
 import basemod.BaseMod;
 import basemod.interfaces.*;
+import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
 import org.apache.logging.log4j.LogManager;
 import slayTheVine.cards.*;
+import sun.nio.cs.StandardCharsets;
 
 import java.util.logging.Logger;
 
 @SpireInitializer
-public class SlayTheVine implements EditCardsSubscriber {
+public class SlayTheVine implements EditCardsSubscriber, EditStringsSubscriber {
 
     public static final Logger logger = (Logger) LogManager.getLogger(SlayTheVine.class.getName());
+
+    public static final CardColor VINE_COLOR = CardColor.COLORLESS;
 
     public SlayTheVine() {
         logger.info("Subscribing...");
@@ -28,5 +33,13 @@ public class SlayTheVine implements EditCardsSubscriber {
     public void receiveEditCards() {
         logger.info("Adding cards...");
         BaseMod.addCard(new ZipZoom());
+    }
+
+    @Override
+    public void receiveEditStrings() {
+        logger.info("Editing strings...");
+
+        String cardStrings = Gdx.files.internal("localization/stv-cards.json")
+                .readString(String.valueOf(StandardCharsets.UTF_8));
     }
 }
