@@ -5,6 +5,7 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import org.apache.logging.log4j.LogManager;
 import slayTheVine.cards.*;
 import sun.nio.cs.StandardCharsets;
@@ -39,7 +40,6 @@ public class SlayTheVine implements EditCardsSubscriber, EditStringsSubscriber {
     public void receiveEditStrings() {
         logger.info("Editing strings...");
 
-        String cardStrings = Gdx.files.internal("localization/stv-cards.json")
-                .readString(String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStringsFile(CardStrings.class, "localization/stv-cards.json");
     }
 }

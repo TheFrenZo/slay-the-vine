@@ -17,17 +17,17 @@ public class ZipZoom extends AbstractVineCard {
 
     int damage = 5;
 
-    final String ID = "slayTheVine:ZipZoom";
-    final String IMG= "img/cards/zipzoom/zipzoom.png";
-    final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
-    final String NAME = CARD_STRINGS.NAME;
-    final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    final CardType TYPE = CardType.ATTACK;
-    final CardColor COLOR = SlayTheVine.VINE_COLOR;
-    final CardRarity RARITY = CardRarity.COMMON;
-    final CardTarget TARGET = CardTarget.ENEMY;
+    static final String ID = "slayTheVine:ZipZoom";
+    static final String IMG= "img/cards/zipzoom/zipzoom.png";
+    static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
+    static final String NAME = CARD_STRINGS.NAME;
+    static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
+    static final CardType TYPE = CardType.ATTACK;
+    static final CardColor COLOR = SlayTheVine.VINE_COLOR;
+    static final CardRarity RARITY = CardRarity.COMMON;
+    static final CardTarget TARGET = CardTarget.ENEMY;
 
-    int COST = 2;
+    static int COST = 2;
 
     public ZipZoom() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
