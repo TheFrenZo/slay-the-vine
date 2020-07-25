@@ -2,13 +2,11 @@ package slayTheVine;
 
 import basemod.BaseMod;
 import basemod.interfaces.*;
-import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import org.apache.logging.log4j.LogManager;
 import slayTheVine.cards.*;
-import sun.nio.cs.StandardCharsets;
 
 import java.util.logging.Logger;
 
