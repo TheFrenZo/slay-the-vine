@@ -5,7 +5,7 @@ import basemod.interfaces.*;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
 import com.megacrit.cardcrawl.localization.CardStrings;
-import org.apache.logging.log4j.LogManager;
+import java.util.logging.Logger;
 import slayTheVine.cards.*;
 
 import java.util.logging.Logger;
@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 @SpireInitializer
 public class SlayTheVine implements EditCardsSubscriber, EditStringsSubscriber {
 
-    public static final Logger logger = (Logger) LogManager.getLogger(SlayTheVine.class.getName());
+    public static final Logger logger = Logger.getLogger(SlayTheVine.class.getName());
 
     public static final CardColor VINE_COLOR = CardColor.COLORLESS;
 
