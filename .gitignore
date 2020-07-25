@@ -1,3 +1,5 @@
-lib/
-.idea
+/lib/
+/.idea/
 slay the vine.iml
+/target/
+/src/test/
